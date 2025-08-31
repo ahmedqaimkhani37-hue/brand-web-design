@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\brandcurb website\style.css">
+
+    <title>brandcurb</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
+        p {
+            font-size: 1.4vw;
+        }
+
+
+        @media screen and (max-width: 1200px) {
+            .header {
+                justify-content: center;
+            }
+
+            .logo {
+                width: 20vw;
+            }
+
+            .nav,
+            .book {
+                display: none;
+
+            }
+
+            .our {
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+
+            .anchor5 {
+                display: none;
+            }
+
+            .content2 {
+                justify-content: center;
+            }
+
+            .content2 {
+                flex-wrap: wrap;
+            }
+
+            .anchor3 {
+                display: none;
+            }
+
+            .anchor4 {
+                padding: 0;
+            }
+
+            /* .para1 { */
+            /* font-size: 2vw; */
+            /* } */
+
+            .images-p1 {
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            /* .heading2 {} */
+
+            .anchor2 {
+                display: none;
+            }
+
+            #anchor2 {
+                display: block;
+            }
+
+        }
+
+        .main-header {
+            position: fixed;
+            z-index: 1;
+            opacity: 0.9;
+            left: 0;
+            right: 0;
+        }
+
+        .header {
+            display: flex;
+            margin-top: 60px;
+            align-items: center;
+            justify-content: space-between;
+            width: 80vw;
+            padding: 4px 8px 4px 8px;
+            box-shadow: 10px 10px 10px gray;
+            border-radius: 6px;
+            justify-self: center;
+            background-color: rgb(253, 251, 251);
+        }
+
+        .logo {
+            width: 10vw;
+        }
+
+
+
+        .nav {
+            width: 50vw;
+        }
+
+        ul {
+            display: flex;
+            font-weight: 700;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #anchor1 {
+            text-decoration: none;
+            position: relative;
+            color: gray;
+            margin: 0px 8px 0px 8px;
+        }
+
+        #anchor1::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(to right, green, red);
+            transition: width 0.8s ease;
+        }
+
+        #anchor1:hover::after {
+            width: 100%;
+            margin-top: 3px;
+            height: 3px;
+        }
+
+        .anchor2 {
+            background-color: rgb(255, 94, 0);
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bolder;
+            border-radius: 20px;
+        }
+
+        /* .main-content {} */
+
+        .extra {
+            width: 100%;
+            height: 20vh;
+        }
+
+        .content1 {
+            justify-items: center;
+            padding: 30px;
+        }
+
+        .heading1 {
+            font-size: 5vw;
+            color: rgb(41, 38, 38);
+            position: relative;
+        }
+
+        .word:nth-child(1) {
+            animation: word 2s ease 0s 1 forwards;
+            top: 130px;
+            position: relative;
+            opacity: 1;
+        }
+
+        .word:nth-child(2) {
+            animation: word 2s ease 0.2s 1 forwards;
+            position: relative;
+            top: 130px;
+            opacity: 1;
+        }
+
+        .word:nth-child(3) {
+            animation: word 2s ease 0.4s 1 forwards;
+            top: 130px;
+            position: relative;
+            opacity: 1;
+        }
+
+        .word:nth-child(4) {
+            animation: word 2s ease 0.6s 1 forwards;
+            opacity: 1;
+            top: 130px;
+            position: relative;
+        }
+
+
+        .animation-heading {
+            height: 100px;
+            overflow: hidden;
+        }
+
+        @keyframes word {
+            0% {
+                top: 130px;
+            }
+
+            100% {
+                top: 0px;
+            }
+
+        }
+
+
+        .para1 {
+            margin: 50px;
+            color: #69727d;
+            /* font-size: 20px;
+             */
+            font-size: 2vw;
+            font-weight: 700;
+        }
+
+        .anchor3 {
+            color: white;
+            background-color: #0e6453;
+            font-weight: 700;
+            padding: 1.5vw 4vw 1.5vw 4vw;
+
+            border-radius: 40px;
+            text-decoration: none;
+            margin: 30px;
+        }
+
+        .anchor4 {
+            color: white;
+            margin: 30px;
+            background-color: rgb(255, 94, 0);
+            font-weight: 700;
+            padding: 1.5vw 2.6vw 1.5vw 2.6vw;
+            text-decoration: none;
+            border-radius: 40px;
+        }
+
+        .content2 {
+            display: flex;
+            align-items: center;
+            margin: 30px 0px 30px 0px;
+            padding: 40px 0px 40px;
+        }
+
+        .main-img {
+            width: 40vw;
+            border: 0;
+        }
+
+        .under-content2 {
+            margin-left: 30px;
+
+        }
+
+        .heading2 {
+            background-color: rgb(255, 94, 0);
+            padding: 5px 9px 5px 9px;
+            border-radius: 5px;
+            color: white;
+
+            display: inline;
+        }
+
+        .para2 {
+
+            color: #69727d;
+            font-weight: 700;
+        }
+
+        .anchor5 {
+            color: white;
+            background-color: #0e6453;
+            font-weight: 700;
+            padding: 10px 15px 10px 15px;
+            border-radius: 40px;
+            text-decoration: none;
+            margin: 30px;
+        }
+
+        .anchor6 {
+            color: white;
+            margin: 30px;
+            background-color: rgb(255, 94, 0);
+            font-weight: 700;
+            padding: 10px 15px 10px 15px;
+            text-decoration: none;
+            border-radius: 40px;
+        }
+
+        .heading3 {
+            font-size: 4vw;
+            background: linear-gradient(to right, rgb(83, 33, 33), rgb(194, 61, 61));
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+
+        .our {
+            display: flex;
+            justify-content: space-between;
+            color: #69727d;
+            padding: 5vw 10vw 5vw 10vw;
+            align-items: center;
+        }
+
+        .heading7 {
+            position: relative;
+            font-size: 3.5vw;
+        }
+
+        .heading7:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 10%;
+            bottom: 30px;
+            transition: height 0.8s ease;
+            background-color: #0e6453;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            border-radius: 3px;
+            animation-name: heading;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+        }
+
+        @keyframes heading {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        .heading7:hover::after {
+            height: 100%;
+        }
+
+        .images-p1 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 40px 80px 40px 80px;
+        }
+
+        .main-image {
+            width: 300px;
+        }
+
+
+        .img-information {
+            display: flex;
+            border-radius: 5px;
+            flex-direction: column;
+            padding: 3px 5px 3px 5px;
+            justify-content: center;
+            align-items: center;
+            width: 350px;
+            margin: 10px 20px 10px 20px;
+            font-weight: 900;
+            border: 1px solid #69727d;
+        }
+
+        .img-information:hover {
+            transform: scale(1.01);
+        }
+
+        .information {
+            text-decoration: none;
+            color: gray;
+            font-size: larger;
+        }
+
+        /* .main-image:hover {} */
+
+        .content3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10vw;
+        }
+
+        .para3 {
+            margin: 20px 20px 20px 20px;
+        }
+
+        #anchor2 {
+            margin-top: 30px;
+            padding: 10px 20px 10px 20px;
+            font-size: 1.4vw;
+        }
+
+        .grow {
+            position: relative;
+        }
+
+        .grow::after {
+            content: "";
+            width: 100%;
+            height: 10%;
+            left: 0;
+            bottom: 0;
+            background-color: rgb(255, 94, 0);
+            z-index: -1;
+            transition: height 0.41s ease;
+            border-radius: 3px;
+            position: absolute;
+        }
+
+        .grow:hover::after {
+            height: 100%;
+        }
+
+        .footer1 {
+            display: flex;
+            padding: 10px 90px 10px 90px;
+
+
+        }
+
+        .footer2 {
+
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            text-align: center;
+            background-color: rgba(223, 214, 214, 0.26);
+            justify-content: space-around;
+
+        }
+
+        .anchor7 {
+            text-decoration: none;
+            color: #69727d;
+            font-weight: 900;
+            font-size: 25px;
+            padding: 40px 50px 40px 50px;
+
+        }
+
+        .under-footer-2-2 {
+            background-color: white;
+            padding: 40px;
+
+        }
+
+        .under-footer-2-2 h3,
+        p.img {
+            margin: 30px;
+        }
+
+        h3 {
+            margin: 30px;
+        }
+
+        p {
+            margin: 30px;
+        }
+
+        .lastimg {
+            margin: 30px;
+        }
+
+        .lastfooter {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: white;
+            border-top: 1px solid rgba(0, 0, 0, 0.144);
+        }
+        .change-color:active body{
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-body">
+        <div class="main-header">
+            <div class="header">
+                <div class="logo"><img src="./brandcurb-logo.webp" loading="lazy" alt="">
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="#" id="anchor1"class='change-color'>WEBSITE</a></li>
+                        <li><a href="#" id="anchor1">SEO</a></li>
+                        <li><a href="#" id="anchor1">BRANDING</a></li>
+                        <li><a href="#" id="anchor1">PPC</a></li>
+                        <li><a href="#" id="anchor1">ABOUT US</a></li>
+                        <li><a href="#" id="anchor1">BLOG</a></li>
+                        <li><a href="#" id="anchor1">CONTENT US</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="anchor2">book a free consultation</a>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="extra"></div>
+            <div class="content1">
+                <div class="animation-heading">
+                    <h1 class="heading1">
+                        <span class="word">EVERYTHING </span>
+                        <span class="word">IN </span>
+                        <span class="word">ONE </span>
+                        <span class="word">PLACE</span>
+                    </h1>
+                </div>
+                <pre>
+                    <p class="para1">
+Brandcurb is a one-stop shop hub—you’ll have  from branding to everything
+digital marketing services available to you to effectively, efficiently,
+            and sustainably grow your business.
+                </p>
+                </pre>
+                <ul>
+                    <li><a href="#" class="anchor3">Explore our services</a></li>
+                    <li><a href="#" class="anchor4">book a free consultation</a></li>
+                </ul>
+            </div>
+            <div class="content2">
+                <img src="./brandcurb-digital-marketing.webp" class="main-img" alt="">
+                <section class="under-content2">
+                    <h4 class="heading2">NO FUSS PURCHASE</h4>
+                    <pre>
+                <h1 class="heading3">   
+UNIFIED DIGITAL 
+    COMMUNICATIONS</h1>
+                    </pre>
+                    <pre>
+                <p class="para2">
+Whether it be for your branding, website, or digital marketing needs,
+ we have them all ready and yours for the taking in three simple steps.
+
+ 
+
+BrandCurb gives you every service you need for your business,
+ with no hidden charges, and tailored contracts!</p>
+                </pre>
+
+                    <a href="#" class="anchor5">Explore our services</a>
+                    <a href="#" class="anchor6">book a free consultation</a>
+                </section>
+            </div>
+            <div class="services">
+                <section class="our">
+                    <h1 class="heading7">OUR SERVICES</h1>
+                    <h3 class="heading8">Digital Marketing Services: Boost Your Online Presence</h3>
+                </section>
+                <section class="images-p1">
+                    <a href="#" class="information">
+                        <div class="img-information"> <img loading="lazy"
+                                src="./web-design-development.webp" alt=""
+                                class="main-image">WEB-design-development></div>
+                    </a>
+                    <a href="#" class="information">
+                        <div class="img-information"> <img loading="lazy"
+                                src="./seo-marketing.webp" alt="" class="main-image">SEARCH
+                            ENGINE OPTIMAIZATION</div>
+                    </a>
+                    <a href="#" class="information">
+                        <div class="img-information"> <img loading="lazy" src="./branding.webp"
+                                alt="" class="main-image">BRANDING
+                        </div>
+                    </a>
+                    <a href="#" class="information">
+                        <div class="img-information"><img loading="lazy"
+                                src="./ppc-marketing.webp" alt=""
+                                class="main-image">PAY-PER-CLICK(MARKITING)</div>
+                    </a>
+                    <a href="#" class="information">
+                        <div class="img-information"> <img loading="lazy"
+                                src="./social-media-marketing.webp" alt=""
+                                class="main-image">SOCIAL MEDIA MARKITING</div>
+                    </a>
+                    <a href="#" class="information">
+                        <div class="img-information"> <img loading="lazy"
+                                src="./email-marketing.webp" alt="" class="main-image">E-MAIL
+                            MARKITING</div>
+                    </a>
+                </section>
+            </div>
+            <div class="content3">
+                <h1 class="heading1">
+                    <pre>
+Ready to <span class="grow">Grow Your </span>
+<span class="grow">Business?</span></pre>
+                </h1>
+                <p class="para3">
+                    Contact us today to discuss how our services can help you <br>
+                    achieve your goals.
+                </p>
+                <a href="#" class="anchor2" id="anchor2">book a free consultation</a>
+            </div>
+        </div>
+        <div class="main-footer">
+            <div class="footer1">
+                <a href="#" class="anchor7">Book a free consultation</a>
+
+            </div>
+            <div class="footer2">
+                <section class="under-footer2-1">
+                    <img src="./brandcurb-logo.webp" loading="lazy" alt="">
+                    <pre>
+                    <p>
+BrandCurb is a unified communications platform
+that empowers business owners and promotes
+business growth through services that strengthen
+brand identity, and sustainably promote online
+presence to increase engagement.</p>
+</pre>
+                    <h3>secure payment</h3>
+                </section>
+                <section class="under-footer2-2">
+                    <h3>content us</h3>
+                    <p>+1888 318 CURB</p>
+                    <p>340 king street East <br>Toronto,on M5A 1k8</p>
+                    <img src="./PartnerBadgeClickable.svg" class="lastimg" alt="">
+                </section>
+                <hr>
+            </div>
+            <div class="lastfooter">
+                <p>copy write &copy Brandcurb 2013-2023. </p>
+                <p>carears term & condition privacy policy</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
